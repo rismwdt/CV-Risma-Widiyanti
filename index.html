@@ -26,7 +26,8 @@
                     },
                     fontFamily: {
                         sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto",
-                            "Arial"]
+                            "Arial"
+                        ]
                     }
                 }
             }
@@ -35,31 +36,152 @@
     <style>
         @page {
             size: A4;
-            margin: 12mm;
+            margin: 0;
         }
 
         @media print {
-
-            html,
-            body {
-                height: auto;
+            .no-print {
+                display: none !important;
             }
 
+            html,
+            body,
             * {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
             }
 
-            .no-print {
-                display: none !important;
+            .print-grid-12 {
+                display: grid !important;
+                grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+                gap: 16px !important;
             }
 
-            .page {
+            .print-col-4 {
+                grid-column: span 4 / span 4 !important;
+            }
+
+            .print-col-8 {
+                grid-column: span 8 / span 8 !important;
+            }
+
+            .print-avoid-break {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .page>header {
+                background: linear-gradient(90deg, #4338CA 0%, #0284C7 100%) !important;
+                color: #ffffff !important;
+            }
+
+            .page>header a,
+            .page>header span {
+                background: rgba(255, 255, 255, 0.22) !important;
+                color: #ffffff !important;
+                border-radius: 9999px !important;
+            }
+
+            .page>header .ring-white\/80 {
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset !important;
+            }
+
+            article header {
+                background: transparent !important;
+            }
+
+            .text-white\/90 {
+                color: rgba(255, 255, 255, 0.9) !important;
+            }
+
+            .text-primary-700 {
+                color: #4338CA !important;
+            }
+
+            .text-primary-600 {
+                color: #4F46E5 !important;
+            }
+
+            .text-slate-700 {
+                color: #334155 !important;
+            }
+
+            .text-slate-600 {
+                color: #475569 !important;
+            }
+
+            .bg-primary-50 {
+                background: #EEF2FF !important;
+            }
+
+            .bg-accent-50 {
+                background: #FFF7ED !important;
+            }
+
+            .text-accent-600 {
+                color: #D97706 !important;
+            }
+
+            .bg-accent-500 {
+                background: #F59E0B !important;
+            }
+
+            .border-l-4 {
+                border-left: 4px solid #4F46E5 !important;
+            }
+
+            .ring-1,
+            .ring-slate-200 {
                 box-shadow: none !important;
             }
         }
     </style>
 </head>
+<script>
+    (function () {
+        const mmToPx = mm => mm * (96 / 25.4);
+
+        async function fitToOneA4() {
+            const htmlEl = document.documentElement;
+            const pageEl = document.querySelector('.page');
+            if (!pageEl) return;
+
+            if (document.fonts && document.fonts.ready) {
+                try {
+                    await document.fonts.ready;
+                } catch (e) {}
+            }
+            await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+            const targetH = mmToPx(297);
+
+            htmlEl.style.zoom = 1;
+
+            const contentH = pageEl.scrollHeight;
+
+            let scale = Math.min(1, (targetH / contentH) * 0.98);
+
+            let tries = 0;
+            while (tries < 6) {
+                htmlEl.style.zoom = scale;
+                await new Promise(r => requestAnimationFrame(r));
+
+                const after = pageEl.getBoundingClientRect().height;
+                if (after <= targetH) break;
+                scale *= 0.98;
+                tries++;
+            }
+        }
+
+        window.addEventListener('load', fitToOneA4);
+        window.addEventListener('resize', fitToOneA4);
+        window.addEventListener('beforeprint', fitToOneA4);
+
+        window.addEventListener('afterprint', () => {
+            document.documentElement.style.zoom = 1;
+        });
+    })();
+</script>
 
 <body class="bg-slate-100 text-slate-800 antialiased print:bg-white print:text-[12px]">
     <main
@@ -84,7 +206,7 @@
                                 class="w-4 h-4">
                                 <path
                                     d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 17.25V6.75zm2.318-.53a.75.75 0 00-1.136.65v.12l8.25 5.25 8.25-5.25v-.12a.75.75 0 00-1.136-.65L12 11.19 3.818 6.22z" />
-                                </svg>
+                            </svg>
                             rismwdt18@gmail.com
                         </a>
                         <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
@@ -108,8 +230,8 @@
             </div>
         </header>
 
-        <section class="p-6 sm:p-8 print:p-6 grid grid-cols-12 gap-6">
-            <aside class="col-span-12 md:col-span-4 space-y-6">
+        <section class="p-6 sm:p-8 print:p-6 grid grid-cols-12 gap-6 print-grid-12 print-avoid-break">
+            <aside class="col-span-12 md:col-span-4 print-col-4 space-y-6 print-avoid-break">
                 <div>
                     <h2 class="text-sm font-bold tracking-wider text-primary-700">TAUTAN</h2>
                     <div class="mt-3 flex flex-col gap-2 text-sm">
@@ -120,7 +242,7 @@
                                 class="w-5 h-5 text-primary-600 group-hover:scale-110 transition">
                                 <path
                                     d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764 0-.975.784-1.765 1.75-1.765s1.75.79 1.75 1.765c0 .974-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.06-1.866-3.06-1.868 0-2.154 1.459-2.154 2.966v5.698h-3v-10h2.881v1.367h.041c.401-.76 1.381-1.561 2.842-1.561 3.04 0 3.604 2.002 3.604 4.605v5.589z" />
-                                </svg>
+                            </svg>
                             linkedin.com/in/risma-widiyanti-949b51381/
                         </a>
                         <a target="_blank" rel="noopener noreferrer" href="https://github.com/rismwdt"
@@ -175,7 +297,7 @@
                 </div>
             </aside>
 
-            <section class="col-span-12 md:col-span-8 space-y-7">
+            <section class="col-span-12 md:col-span-8 print-col-8 space-y-7 print-avoid-break">
                 <div>
                     <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2">
                         <span class="h-2 w-2 rounded-full bg-accent-500"></span> PROFIL
@@ -294,9 +416,9 @@
 
         <!-- Footer mini -->
         <!-- <footer class="px-6 sm:px-8 pb-6 text-[11px] text-slate-500 flex items-center justify-between">
-      <span>CV diperbarui: <script>document.write(new Date().toLocaleDateString('id-ID'))</script></span>
-      <span class="italic">Cetak: Ctrl/Cmd + P → Save as PDF</span>
-    </footer> -->
+            <span>CV diperbarui: <script>document.write(new Date().toLocaleDateString('id-ID'))</script></span>
+            <span class="italic">Cetak: Ctrl/Cmd + P → Save as PDF</span>
+            </footer> -->
     </main>
 
     <div class="no-print fixed bottom-4 right-4">
@@ -305,7 +427,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
                 <path
                     d="M6 7a3 3 0 013-3h6a3 3 0 013 3v3h1a2 2 0 012 2v4a2 2 0 01-2 2h-1v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-1H5a2 2 0 01-2-2v-4a2 2 0 012-2h1V7zm2 0v3h8V7a1 1 0 00-1-1H9a1 1 0 00-1 1zm8 11v-3H8v3h8z" />
-                </svg>
+            </svg>
             Download PDF
         </button>
     </div>
