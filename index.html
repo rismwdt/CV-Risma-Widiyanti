@@ -2,435 +2,532 @@
 <html lang="id" class="scroll-smooth">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV – Risma Widiyanti</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#eef2ff',
-                            100: '#e0e7ff',
-                            600: '#4f46e5',
-                            700: '#4338ca'
-                        },
-                        accent: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            500: '#f59e0b',
-                            600: '#d97706'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto",
-                            "Arial"
-                        ]
-                    }
-                }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Risma Widiyanti (Admin & Web Dev)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              600: '#4f46e5',
+              700: '#4338ca'
+            },
+            accent: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f59e0b',
+              600: '#d97706'
             }
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Arial"]
+          }
         }
-    </script>
-    <style>
-        @page {
-            size: A4;
-            margin: 0;
-        }
+      }
+    }
+  </script>
+  <style>
+    @page {
+      size: A4;
+      margin: 0
+    }
 
-        @media print {
-            .no-print {
-                display: none !important;
-            }
+    @media print {
+      .no-print {
+        display: none !important
+      }
 
-            html,
-            body,
-            * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-            }
+      html,
+      body,
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important
+      }
 
-            .print-grid-12 {
-                display: grid !important;
-                grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
-                gap: 16px !important;
-            }
+      .print-grid-12 {
+        display: grid !important;
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+        gap: 16px !important
+      }
 
-            .print-col-4 {
-                grid-column: span 4 / span 4 !important;
-            }
+      .print-col-4 {
+        grid-column: span 4 / span 4 !important
+      }
 
-            .print-col-8 {
-                grid-column: span 8 / span 8 !important;
-            }
+      .print-col-8 {
+        grid-column: span 8 / span 8 !important
+      }
 
-            .print-avoid-break {
-                page-break-inside: avoid;
-                break-inside: avoid;
-            }
+      .print-avoid-break {
+        page-break-inside: avoid;
+        break-inside: avoid
+      }
 
-            .page>header {
-                background: linear-gradient(90deg, #4338CA 0%, #0284C7 100%) !important;
-                color: #ffffff !important;
-            }
+      .tab-panel {
+        display: none !important
+      }
 
-            .page>header a,
-            .page>header span {
-                background: rgba(255, 255, 255, 0.22) !important;
-                color: #ffffff !important;
-                border-radius: 9999px !important;
-            }
+      .tab-panel[data-active="true"] {
+        display: block !important
+      }
 
-            .page>header .ring-white\/80 {
-                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8) inset !important;
-            }
+      .page>header {
+        background: linear-gradient(90deg, #4338CA 0%, #0284C7 100%) !important;
+        color: #fff !important
+      }
 
-            article header {
-                background: transparent !important;
-            }
+      .page>header a,
+      .page>header span {
+        background: rgba(255, 255, 255, .22) !important;
+        color: #fff !important;
+        border-radius: 9999px !important
+      }
 
-            .text-white\/90 {
-                color: rgba(255, 255, 255, 0.9) !important;
-            }
+      .page>header .ring-white\/80 {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .8) inset !important
+      }
 
-            .text-primary-700 {
-                color: #4338CA !important;
-            }
+      .text-white\/90 {
+        color: rgba(255, 255, 255, .9) !important
+      }
 
-            .text-primary-600 {
-                color: #4F46E5 !important;
-            }
+      .text-primary-700 {
+        color: #4338CA !important
+      }
 
-            .text-slate-700 {
-                color: #334155 !important;
-            }
+      .text-primary-600 {
+        color: #4F46E5 !important
+      }
 
-            .text-slate-600 {
-                color: #475569 !important;
-            }
+      .text-slate-700 {
+        color: #334155 !important
+      }
 
-            .bg-primary-50 {
-                background: #EEF2FF !important;
-            }
+      .text-slate-600 {
+        color: #475569 !important
+      }
 
-            .bg-accent-50 {
-                background: #FFF7ED !important;
-            }
+      .bg-primary-50 {
+        background: #EEF2FF !important
+      }
 
-            .text-accent-600 {
-                color: #D97706 !important;
-            }
+      .bg-accent-50 {
+        background: #FFF7ED !important
+      }
 
-            .bg-accent-500 {
-                background: #F59E0B !important;
-            }
+      .text-accent-600 {
+        color: #D97706 !important
+      }
 
-            .border-l-4 {
-                border-left: 4px solid #4F46E5 !important;
-            }
+      .bg-accent-500 {
+        background: #F59E0B !important
+      }
 
-            .ring-1,
-            .ring-slate-200 {
-                box-shadow: none !important;
-            }
-        }
-    </style>
-</head>
-<script>
+      .border-l-4 {
+        border-left: 4px solid #4F46E5 !important
+      }
+
+      .ring-1,
+      .ring-slate-200 {
+        box-shadow: none !important
+      }
+    }
+  </style>
+  <script>
     (function () {
-        const mmToPx = mm => mm * (96 / 25.4);
-
-        async function fitToOneA4() {
-            const htmlEl = document.documentElement;
-            const pageEl = document.querySelector('.page');
-            if (!pageEl) return;
-
-            if (document.fonts && document.fonts.ready) {
-                try {
-                    await document.fonts.ready;
-                } catch (e) {}
-            }
-            await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
-
-            const targetH = mmToPx(297);
-
-            htmlEl.style.zoom = 1;
-
-            const contentH = pageEl.scrollHeight;
-
-            let scale = Math.min(1, (targetH / contentH) * 0.98);
-
-            let tries = 0;
-            while (tries < 6) {
-                htmlEl.style.zoom = scale;
-                await new Promise(r => requestAnimationFrame(r));
-
-                const after = pageEl.getBoundingClientRect().height;
-                if (after <= targetH) break;
-                scale *= 0.98;
-                tries++;
-            }
+      const mmToPx = mm => mm * (96 / 25.4);
+      async function fitToOneA4() {
+        const htmlEl = document.documentElement;
+        const pageEl = document.querySelector('.page');
+        if (!pageEl) return;
+        if (document.fonts && document.fonts.ready) {
+          try {
+            await document.fonts.ready
+          } catch (e) {}
         }
-
-        window.addEventListener('load', fitToOneA4);
-        window.addEventListener('resize', fitToOneA4);
-        window.addEventListener('beforeprint', fitToOneA4);
-
-        window.addEventListener('afterprint', () => {
-            document.documentElement.style.zoom = 1;
-        });
+        await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+        const targetH = mmToPx(297);
+        htmlEl.style.zoom = 1;
+        const contentH = pageEl.scrollHeight;
+        let scale = Math.min(1, (targetH / contentH) * 0.98);
+        let tries = 0;
+        while (tries < 6) {
+          htmlEl.style.zoom = scale;
+          await new Promise(r => requestAnimationFrame(r));
+          const after = pageEl.getBoundingClientRect().height;
+          if (after <= targetH) break;
+          scale *= 0.98;
+          tries++
+        }
+      }
+      window.addEventListener('load', fitToOneA4);
+      window.addEventListener('resize', fitToOneA4);
+      window.addEventListener('beforeprint', fitToOneA4);
+      window.addEventListener('afterprint', () => {
+        document.documentElement.style.zoom = 1
+      });
     })();
-</script>
+  </script>
+</head>
 
 <body class="bg-slate-100 text-slate-800 antialiased print:bg-white print:text-[12px]">
-    <main
-        class="page max-w-4xl mx-auto my-6 bg-white shadow-xl ring-1 ring-slate-200 rounded-2xl overflow-hidden print:shadow-none print:ring-0 print:my-0">
-
-        <header class="bg-gradient-to-r from-primary-700 to-sky-600 text-white p-6 sm:p-8 print:p-6">
-            <div class="flex items-center gap-5">
-                <div
-                    class="relative h-24 w-24 sm:h-28 sm:w-28 rounded-2xl overflow-hidden ring-2 ring-white/80 bg-white/10 flex items-center justify-center">
-                    <img src="image/Foto.png" alt="Foto Profil" class="h-full w-full object-cover"
-                        onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend', '<div class=\'text-center text-white/90 text-sm\'>Tambahkan<br>foto.jpg</div>')" />
-                </div>
-
-                <div>
-                    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Risma Widiyanti, S.Kom</h1>
-                    <p class="mt-1 text-white/90 text-sm sm:text-base">Administrasi • Accounting • Customer Service •
-                        Web Dev (Laravel)</p>
-                    <div class="mt-3 flex flex-wrap gap-3 text-[13px]">
-                        <a target="_blank" rel="noopener noreferrer" href="mailto:rismwdt18@gmail.com"
-                            class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-4 h-4">
-                                <path
-                                    d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5a2.25 2.25 0 012.25 2.25v10.5a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 17.25V6.75zm2.318-.53a.75.75 0 00-1.136.65v.12l8.25 5.25 8.25-5.25v-.12a.75.75 0 00-1.136-.65L12 11.19 3.818 6.22z" />
-                            </svg>
-                            rismwdt18@gmail.com
-                        </a>
-                        <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-4 h-4">
-                                <path fill-rule="evenodd"
-                                    d="M1.5 4.5A1.5 1.5 0 013 3h3a1.5 1.5 0 011.5 1.5V6A1.5 1.5 0 016 7.5H5.25c.076 2.493 1.11 4.802 2.873 6.564S11.507 17.674 14 17.75V17A1.5 1.5 0 0115.5 15.5H18A1.5 1.5 0 0119.5 17v3A1.5 1.5 0 0118 21.5C9.44 21.5 2.5 14.56 2.5 6A1.5 1.5 0 014 4.5H1.5z"
-                                    clip-rule="evenodd" /></svg>
-                            0895329252292
-                        </span>
-                        <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-4 h-4">
-                                <path fill-rule="evenodd"
-                                    d="M12 2.25c-3.728 0-6.75 3.022-6.75 6.75 0 5.072 6.75 12.75 6.75 12.75s6.75-7.678 6.75-12.75c0-3.728-3.022-6.75-6.75-6.75zm0 9a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
-                                    clip-rule="evenodd" /></svg>
-                            Cimahi – Bandung
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section class="p-6 sm:p-8 print:p-6 grid grid-cols-12 gap-6 print-grid-12 print-avoid-break">
-            <aside class="col-span-12 md:col-span-4 print-col-4 space-y-6 print-avoid-break">
-                <div>
-                    <h2 class="text-sm font-bold tracking-wider text-primary-700">TAUTAN</h2>
-                    <div class="mt-3 flex flex-col gap-2 text-sm">
-                        <a target="_blank" rel="noopener noreferrer"
-                            href="https://www.linkedin.com/in/risma-widiyanti-949b51381/"
-                            class="group inline-flex items-center gap-2 text-slate-700 hover:text-primary-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-5 h-5 text-primary-600 group-hover:scale-110 transition">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764 0-.975.784-1.765 1.75-1.765s1.75.79 1.75 1.765c0 .974-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.06-1.866-3.06-1.868 0-2.154 1.459-2.154 2.966v5.698h-3v-10h2.881v1.367h.041c.401-.76 1.381-1.561 2.842-1.561 3.04 0 3.604 2.002 3.604 4.605v5.589z" />
-                            </svg>
-                            linkedin.com/in/risma-widiyanti-949b51381/
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/rismwdt"
-                            class="group inline-flex items-center gap-2 text-slate-700 hover:text-primary-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-5 h-5 text-primary-600 group-hover:scale-110 transition">
-                                <path fill-rule="evenodd"
-                                    d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.488.5.092.682-.217.682-.482 0-.237-.009-.866-.014-1.701-2.782.604-3.369-1.342-3.369-1.342-.454-1.153-1.11-1.462-1.11-1.462-.907-.62.069-.607.069-.607 1.003.07 1.53 1.031 1.53 1.031.892 1.527 2.341 1.086 2.91.831.091-.647.35-1.086.636-1.337-2.22-.252-4.555-1.112-4.555-4.943 0-1.091.39-1.985 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844a9.56 9.56 0 012.504.337c1.909-1.294 2.748-1.025 2.748-1.025.545 1.377.202 2.394.099 2.647.64.698 1.028 1.592 1.028 2.683 0 3.841-2.338 4.688-4.566 4.936.359.31.678.92.678 1.853 0 1.336-.012 2.414-.012 2.742 0 .267.18.577.688.479C19.138 20.162 22 16.414 22 12c0-5.523-4.477-10-10-10z"
-                                    clip-rule="evenodd" /></svg>
-                            github.com/rismwdt
-                        </a>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 class="text-sm font-bold tracking-wider text-primary-700">KEAHLIAN</h2>
-                    <ul class="mt-3 flex flex-wrap gap-2">
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">HTML
-                        </li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">CSS</li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Tailwind
-                        </li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">PHP</li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Laravel
-                        </li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">
-                            Microsoft Word</li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">
-                            Microsoft Excel</li>
-                        <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">
-                            Microsoft PowerPoint</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 class="text-sm font-bold tracking-wider text-primary-700">SOFT SKILLS</h2>
-                    <ul class="mt-3 space-y-1.5 text-sm list-disc list-inside text-slate-700">
-                        <li>Manajemen administrasi & pengarsipan</li>
-                        <li>Komunikasi & pelayanan pelanggan</li>
-                        <li>Kerjasama tim, disiplin, teliti</li>
-                        <li>Adaptif dan berorientasi target</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 class="text-sm font-bold tracking-wider text-primary-700">SERTIFIKAT & STUDI INDEPENDEN</h2>
-                    <div class="mt-3 text-sm">
-                        <p class="font-semibold">MSIB Batch 7 – PT Someah Kreatif Nusantara</p>
-                        <p class="text-slate-600">Sep–Des 2024 • Web Development with PHP Laravel & International
-                            Certification</p>
-                    </div>
-                </div>
-            </aside>
-
-            <section class="col-span-12 md:col-span-8 print-col-8 space-y-7 print-avoid-break">
-                <div>
-                    <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2">
-                        <span class="h-2 w-2 rounded-full bg-accent-500"></span> PROFIL
-                    </h2>
-                    <p class="mt-3 text-[15px] leading-relaxed text-slate-700">Lulusan Teknik Informatika dengan
-                        pengalaman lebih dari 3 tahun di bidang administrasi, accounting, customer service, dan data
-                        entry. Terbiasa mengelola data, membuat laporan, serta berinteraksi dengan pelanggan maupun tim
-                        internal. Dikenal teliti, disiplin, mampu bekerja dengan target, dan cepat beradaptasi.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2">
-                        <span class="h-2 w-2 rounded-full bg-accent-500"></span> PENGALAMAN KERJA
-                    </h2>
-                    <div class="mt-4 space-y-5">
-                        <article class="border-l-4 border-primary-600 pl-4"
-                            style="break-inside: avoid; page-break-inside: avoid;">
-                            <header class="flex flex-wrap items-baseline justify-between gap-2">
-                                <h3 class="font-semibold">Accounting Staff — <span class="text-slate-700">Your Bag
-                                        Spa</span></h3>
-                                <span class="text-sm text-slate-500">Apr 2024 – Sep 2024</span>
-                            </header>
-                            <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
-                                <li>Mengelola pendataan pengeluaran perusahaan & kas kecil 21 store.</li>
-                                <li>Memproses surat barang masuk/keluar & pendataan stok 21 store; melakukan stok opname
-                                    berkala.</li>
-                                <li>Menginput pembelian ke jurnal & rekonsiliasi transaksi dengan supplier.</li>
-                                <li>Menghitung gaji karyawan produksi & menyusun ringkasan laporan keuangan bulanan.
-                                </li>
-                                <li>Koordinasi pengadaan kebutuhan operasional & pengecekan barang treatment.</li>
-                            </ul>
-                        </article>
-                        <article class="border-l-4 border-primary-600 pl-4"
-                            style="break-inside: avoid; page-break-inside: avoid;">
-                            <header class="flex flex-wrap items-baseline justify-between gap-2">
-                                <h3 class="font-semibold">Customer Service Online — <span class="text-slate-700">Sublim
-                                        Smartone</span></h3>
-                                <span class="text-sm text-slate-500">Agt 2023 – Apr 2024</span>
-                            </header>
-                            <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
-                                <li>Mendukung pengembangan & peluncuran produk baru hingga melampaui target penjualan
-                                    awal.</li>
-                                <li>Mengelola tampilan/visual merchandising produk di marketplace untuk memaksimalkan
-                                    konversi.</li>
-                                <li>Monitoring tren pasar & menyusun laporan perkembangan penjualan.</li>
-                                <li>Menangani konsultasi & komplain pelanggan; menjaga kepuasan pelanggan.
-                                </li>
-                            </ul>
-                        </article>
-                        <article class="border-l-4 border-primary-600 pl-4"
-                            style="break-inside: avoid; page-break-inside: avoid;">
-                            <header class="flex flex-wrap items-baseline justify-between gap-2">
-                                <h3 class="font-semibold">Admin Data Entry — <span class="text-slate-700">Sublim
-                                        Smartone</span></h3>
-                                <span class="text-sm text-slate-500">Agt 2023 – Sep 2023</span>
-                            </header>
-                            <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
-                                <li>Pengarsipan & penataan dokumen; mempercepat temu kembali informasi dan efisiensi
-                                    kerja.</li>
-                            </ul>
-                        </article>
-                        <article class="border-l-4 border-primary-600 pl-4"
-                            style="break-inside: avoid; page-break-inside: avoid;">
-                            <header class="flex flex-wrap items-baseline justify-between gap-2">
-                                <h3 class="font-semibold">Sales Promotion Girl (SPG) — <span
-                                        class="text-slate-700">Fawwaz</span></h3>
-                                <span class="text-sm text-slate-500">Okt 2019 – Jul 2023</span>
-                            </header>
-                            <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
-                                <li>Melayani pelanggan & mencatat transaksi serta data pelanggan; membuat laporan
-                                    penjualan harian/bulanan.</li>
-                                <li>Mengelola pembayaran multi‑metode & pesanan online; unggah dan kelola konten produk.
-                                </li>
-                                <li>Menangani komplain produk & melakukan pengecekan/pencatatan persediaan barang.</li>
-                            </ul>
-                        </article>
-                        <article class="border-l-4 border-primary-600 pl-4"
-                            style="break-inside: avoid; page-break-inside: avoid;">
-                            <header class="flex flex-wrap items-baseline justify-between gap-2">
-                                <h3 class="font-semibold">General Admin — <span class="text-slate-700">Sanggar Citra
-                                        Nusantara Studio</span></h3>
-                                <span class="text-sm text-slate-500">Jun 2019 – Sep 2019</span>
-                            </header>
-                            <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
-                                <li>Layanan pelanggan penyewaan kostum & konsultasi pilihan kostum.</li>
-                                <li>Pencatatan transaksi, pengelolaan bukti pembayaran, dan laporan hasil penyewaan.
-                                </li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2">
-                        <span class="h-2 w-2 rounded-full bg-accent-500"></span> PENDIDIKAN
-                    </h2>
-                    <div class="mt-3 grid gap-3 text-sm">
-                        <div class="flex items-start justify-between">
-                            <div>
-                                <p class="font-semibold">STMIK Mardira Indonesia — S1 Teknik Informatika</p>
-                                <p class="text-slate-600">IPK 3.46 (sebelum nilai skripsi) • 2021–2025</p>
-                            </div>
-                            <span
-                                class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-accent-50 text-accent-600 text-xs font-semibold">S.Kom</span>
-                        </div>
-                        <div class="flex items-start justify-between">
-                            <div>
-                                <p class="font-semibold">SMKN 10 Bandung</p>
-                                <p class="text-slate-600">2016–2019</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- Footer mini -->
-        <!-- <footer class="px-6 sm:px-8 pb-6 text-[11px] text-slate-500 flex items-center justify-between">
-            <span>CV diperbarui: <script>document.write(new Date().toLocaleDateString('id-ID'))</script></span>
-            <span class="italic">Cetak: Ctrl/Cmd + P → Save as PDF</span>
-            </footer> -->
-    </main>
-
-    <div class="no-print fixed bottom-4 right-4">
-        <button onclick="window.print()"
-            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-600 hover:bg-primary-700 text-white shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
-                <path
-                    d="M6 7a3 3 0 013-3h6a3 3 0 013 3v3h1a2 2 0 012 2v4a2 2 0 01-2 2h-1v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-1H5a2 2 0 01-2-2v-4a2 2 0 012-2h1V7zm2 0v3h8V7a1 1 0 00-1-1H9a1 1 0 00-1 1zm8 11v-3H8v3h8z" />
-            </svg>
-            Download PDF
-        </button>
+  <!-- Tabs -->
+  <nav class="no-print sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="flex items-center gap-2 py-2 text-sm">
+        <button data-tab="admin" class="tab-btn px-4 py-2 rounded-full bg-primary-600 text-white font-medium">CV Staff
+          Admin</button>
+        <button data-tab="web"
+          class="tab-btn px-4 py-2 rounded-full hover:bg-primary-100 text-primary-700 font-medium">CV Web
+          Development</button>
+        <div class="ml-auto">
+          <button onclick="window.print()"
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-600 hover:bg-primary-700 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6 7a3 3 0 013-3h6a3 3 0 013 3v3h1a2 2 0 012 2v4a2 2 0 01-2 2h-1v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-1H5a2 2 0 01-2-2v-4a2 2 0 012-2h1V7zm2 0v3h8V7a1 1 0 00-1-1H9a1 1 0 00-1 1zm8 11v-3H8v3h8z" />
+              </svg>
+            Cetak PDF (Tab Aktif)
+          </button>
+        </div>
+      </div>
     </div>
+  </nav>
+
+  <!-- PANEL: ADMIN -->
+  <main id="panel-admin" class="tab-panel" data-active="true">
+    <section
+      class="page max-w-4xl mx-auto my-6 bg-white shadow-xl ring-1 ring-slate-200 rounded-2xl overflow-hidden print:shadow-none print:ring-0 print:my-0">
+      <header class="bg-gradient-to-r from-primary-700 to-sky-600 text-white p-6 sm:p-8 print:p-6">
+        <div class="flex items-center gap-5">
+          <div
+            class="relative h-24 w-24 sm:h-28 sm:w-28 rounded-2xl overflow-hidden ring-2 ring-white/80 bg-white/10 flex items-center justify-center">
+            <img src="image/Foto.png" alt="Foto Profil" class="h-full w-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<div class=\'text-center text-white/90 text-sm\'>Tambahkan<br>foto.jpg</div>')" />
+          </div>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Risma Widiyanti, S.Kom</h1>
+            <p class="mt-1 text-white/90 text-sm sm:text-base">Staff Administrasi • Accounting • Customer Service</p>
+            <div class="mt-3 flex flex-wrap gap-3 text-[13px]">
+              <a href="mailto:rismwdt18@gmail.com"
+                class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">rismwdt18@gmail.com</a>
+              <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">0895329252292</span>
+              <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">Cimahi –
+                Bandung</span>
+              <a href="https://www.linkedin.com/in/risma-widiyanti-949b51381/" target="_blank"
+                class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="p-6 sm:p-8 print:p-6 grid grid-cols-12 gap-6 print-grid-12 print-avoid-break">
+        <aside class="col-span-12 md:col-span-4 print-col-4 space-y-6">
+          <div>
+            <h2 class="text-sm font-bold tracking-wider text-primary-700">KEAHLIAN</h2>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Microsoft Excel</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Microsoft Word</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Administrasi Keuangan</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Rekonsiliasi Transaksi</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Laporan</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Pengarsipan</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Customer Service
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold tracking-wider text-primary-700">KETERAMPILAN NON-TEKNIS</h2>
+            <ul class="mt-3 space-y-1.5 text-sm list-disc list-inside text-slate-700">
+              <li>Teliti</li>
+              <li>Disiplin</li>
+              <li>Komunikasi</li>
+              <li>Teamwork</li>
+              <li>Integritas</li>
+              <li>Adaptif</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold tracking-wider text-primary-700">SERTIFIKAT</h2>
+            <p class="mt-3 text-sm">MSIB Batch 7 – Web Development (Laravel), PT Someah Kreatif Nusantara (Sep–Des 2024)
+            </p>
+          </div>
+        </aside>
+
+        <section class="col-span-12 md:col-span-8 print-col-8 space-y-7">
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2"><span
+                class="h-2 w-2 rounded-full bg-accent-500"></span> PROFIL</h2>
+            <p class="mt-3 text-[15px] leading-relaxed text-slate-700">Lulusan Teknik Informatika dengan pengalaman administrasi dan keuangan. Menguasai Excel, Word, administrasi keuangan, rekonsiliasi, laporan, dan pengarsipan. Terbiasa menangani transaksi harian, pelunasan, serta koordinasi lintas tim. Teliti, disiplin, komunikatif, dan adaptif terhadap target pekerjaan.</p>
+          </div>
+
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2">
+              <span class="h-2 w-2 rounded-full bg-accent-500"></span> PENGALAMAN KERJA
+            </h2>
+            <div class="mt-4 space-y-5">
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Accounting Staff — <span class="text-slate-700">Your Bag Spa</span></h3>
+                  <span class="text-sm text-slate-500">Apr 2024 – Sep 2024</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Input mutasi rekening harian ke sistem dan verifikasi dengan bukti transaksi.</li>
+                  <li>Menyusun laporan harian/bulanan (rekap kas kecil 21 store, ringkasan keuangan, perhitungan gaji
+                    produksi).</li>
+                  <li>Melakukan rekonsiliasi pembayaran dengan tim sales & admin; tindak lanjut selisih.</li>
+                  <li>Mengarsipkan bukti transaksi secara rapi (fisik & digital) untuk kebutuhan audit.</li>
+                  <li>Mengelola pengeluaran operasional & pembelian; rekonsiliasi transaksi dengan supplier.</li>
+                </ul>
+              </article>
+
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Customer Service Online — <span class="text-slate-700">Sublim
+                      Smartone</span></h3>
+                  <span class="text-sm text-slate-500">Agt 2023 – Apr 2024</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Input data pesanan dan konfirmasi pembayaran; follow-up pelunasan.</li>
+                  <li>Rekap penjualan harian & laporan perkembangan tren pasar untuk supervisor.</li>
+                  <li>Menangani komplain & koordinasi lintas tim agar data transaksi akurat.</li>
+                </ul>
+              </article>
+
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Admin Data Entry — <span class="text-slate-700">Sublim Smartone</span></h3>
+                  <span class="text-sm text-slate-500">Agt 2023 – Sep 2023</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Input & validasi data, penamaan file konsisten, serta pengarsipan digital.</li>
+                  <li>Membuat daftar kontrol dokumen untuk mempercepat temu kembali data.</li>
+                </ul>
+              </article>
+
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Sales Promotion Girl (SPG) — <span class="text-slate-700">Fawwaz</span></h3>
+                  <span class="text-sm text-slate-500">Okt 2019 – Jul 2023</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Pencatatan transaksi & rekap penjualan bulanan; kelola pembayaran multi-metode & arsip bukti
+                    transaksi.</li>
+                  <li>Mencocokkan pembayaran customer (transfer/tunai/giro) dengan data bank & order.</li>
+                </ul>
+              </article>
+
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">General Admin — <span class="text-slate-700">Sanggar Citra Nusantara
+                      Studio</span></h3>
+                  <span class="text-sm text-slate-500">Jun 2019 – Sep 2019</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Pengarsipan dokumen penyewaan, rekap pembayaran & penerimaan.</li>
+                  <li>Layanan pelanggan & konsultasi pilihan kostum.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2"><span
+                class="h-2 w-2 rounded-full bg-accent-500"></span> PENDIDIKAN</h2>
+            <div class="mt-3 grid gap-3 text-sm">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-semibold">STMIK Mardira Indonesia — S1 Teknik Informatika</p>
+                  <p class="text-slate-600">IPK 3.46 (sebelum nilai skripsi) • 2021–2025</p>
+                </div>
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-accent-50 text-accent-600 text-xs font-semibold">S.Kom</span>
+              </div>
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-semibold">SMKN 10 Bandung</p>
+                  <p class="text-slate-600">2016–2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <!-- PANEL: WEB DEV -->
+  <main id="panel-web" class="tab-panel" data-active="false">
+    <section
+      class="page max-w-4xl mx-auto my-6 bg-white shadow-xl ring-1 ring-slate-200 rounded-2xl overflow-hidden print:shadow-none print:ring-0 print:my-0">
+      <header class="bg-gradient-to-r from-primary-700 to-sky-600 text-white p-6 sm:p-8 print:p-6">
+        <div class="flex items-center gap-5">
+          <div
+            class="relative h-24 w-24 sm:h-28 sm:w-28 rounded-2xl overflow-hidden ring-2 ring-white/80 bg-white/10 flex items-center justify-center">
+            <img src="image/Foto.png" alt="Foto Profil" class="h-full w-full object-cover"
+              onerror="this.style.display='none'; this.parentElement.insertAdjacentHTML('beforeend','<div class=\'text-center text-white/90 text-sm\'>Tambahkan<br>foto.jpg</div>')" />
+          </div>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Risma Widiyanti, S.Kom</h1>
+            <p class="mt-1 text-white/90 text-sm sm:text-base">Web Developer (Laravel) • Frontend • UI Basics</p>
+            <div class="mt-3 flex flex-wrap gap-3 text-[13px]">
+              <a href="mailto:rismwdt18@gmail.com"
+                class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">rismwdt18@gmail.com</a>
+              <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">0895329252292</span>
+              <span class="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full">Cimahi –
+                Bandung</span>
+              <a href="https://github.com/rismwdt" target="_blank"
+                class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">GitHub</a>
+              <a href="https://www.linkedin.com/in/risma-widiyanti-949b51381/" target="_blank"
+                class="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-full">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="p-6 sm:p-8 print:p-6 grid grid-cols-12 gap-6 print-grid-12 print-avoid-break">
+        <aside class="col-span-12 md:col-span-4 print-col-4 space-y-6">
+          <div>
+            <h2 class="text-sm font-bold tracking-wider text-primary-700">STACK & KEAHLIAN</h2>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">HTML • CSS •
+                Tailwind</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">PHP • Laravel</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">MySQL • Eloquent
+                ORM</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">Git & GitHub</li>
+              <li class="px-3 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-medium">REST API</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold tracking-wider text-primary-700">SERTIFIKAT</h2>
+            <p class="mt-3 text-sm">MSIB Batch 7 – Web Development (Laravel), PT Someah Kreatif Nusantara (Sep–Des 2024)
+            </p>
+          </div>
+          <div>
+            <h2 class="text-sm font-bold tracking-wider text-primary-700">BAHASA</h2>
+            <ul class="mt-3 space-y-1.5 text-sm list-disc list-inside">
+              <li>Indonesia (aktif)</li>
+              <li>Inggris (pasif)</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="col-span-12 md:col-span-8 print-col-8 space-y-7">
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2"><span
+                class="h-2 w-2 rounded-full bg-accent-500"></span> RINGKASAN PROFIL</h2>
+            <p class="mt-3 text-[15px] leading-relaxed text-slate-700">Web developer pemula berfokus pada Laravel &
+              Tailwind. Terbiasa membuat CRUD, autentikasi, integrasi API, dan desain UI sederhana. Memiliki fondasi
+              administrasi sehingga rapi dalam dokumentasi dan manajemen data.</p>
+          </div>
+
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2"><span
+                class="h-2 w-2 rounded-full bg-accent-500"></span> PROYEK TERPILIH</h2>
+            <div class="mt-4 space-y-5">
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Sistem Arsip Sederhana (Laravel)</h3>
+                  <span class="text-sm text-slate-500">2024</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Fitur autentikasi, CRUD dokumen, pencarian, dan upload file.</li>
+                  <li>Teknologi: Laravel 10, Blade, Tailwind, MySQL, Eloquent.</li>
+                </ul>
+              </article>
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Catalog Produk + Checkout (Mock)</h3>
+                  <span class="text-sm text-slate-500">2024</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>List produk, detail, keranjang, form checkout; validasi sisi server.</li>
+                  <li>Teknologi: Laravel, Blade components, Tailwind; seed data & factory.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2"><span
+                class="h-2 w-2 rounded-full bg-accent-500"></span> PENGALAMAN TERKAIT</h2>
+            <div class="mt-4 space-y-5">
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">MSIB – Web Development (Laravel) — <span class="text-slate-700">PT Someah
+                      Kreatif Nusantara</span></h3>
+                  <span class="text-sm text-slate-500">Sep – Des 2024</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Membangun modul CRUD, autentikasi, dan relasi data (Eloquent).</li>
+                  <li>Versi kontrol dengan Git; kolaborasi via GitHub.</li>
+                  <li>Menerapkan Tailwind untuk layout responsif.</li>
+                </ul>
+              </article>
+              <article class="border-l-4 border-primary-600 pl-4" style="break-inside: avoid;">
+                <header class="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 class="font-semibold">Customer Service Online — <span class="text-slate-700">Sublim
+                      Smartone</span></h3>
+                  <span class="text-sm text-slate-500">Agt 2023 – Apr 2024</span>
+                </header>
+                <ul class="mt-2 text-sm text-slate-700 space-y-1.5 list-disc ml-4">
+                  <li>Pengelolaan data pesanan dan laporan (Excel); komunikasi dengan pengguna.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-lg font-bold text-primary-700 flex items-center gap-2"><span
+                class="h-2 w-2 rounded-full bg-accent-500"></span> PENDIDIKAN</h2>
+            <div class="mt-3 grid gap-3 text-sm">
+              <div class="flex items-start justify-between">
+                <div>
+                  <p class="font-semibold">STMIK Mardira Indonesia — S1 Teknik Informatika</p>
+                  <p class="text-slate-600">IPK 3.46 (sebelum nilai skripsi) • 2021–2025</p>
+                </div>
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-1 rounded-md bg-accent-50 text-accent-600 text-xs font-semibold">S.Kom</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-btn');
+    const panels = {
+      admin: document.getElementById('panel-admin'),
+      web: document.getElementById('panel-web')
+    };
+
+    function setActive(tab) {
+      Object.entries(panels).forEach(([k, el]) => {
+        const active = k === tab;
+        el.dataset.active = active;
+        el.style.display = active ? 'block' : 'none'
+      });
+      buttons.forEach(btn => {
+        const is = btn.dataset.tab === tab;
+        btn.classList.toggle('bg-primary-600', is);
+        btn.classList.toggle('text-white', is);
+        btn.classList.toggle('hover:bg-primary-100', !is);
+        btn.classList.toggle('text-primary-700', !is)
+      });
+      document.title = tab === 'admin' ? 'CV – Risma (Staff Admin)' : 'CV – Risma (Web Dev)';
+    }
+    buttons.forEach(b => b.addEventListener('click', () => setActive(b.dataset.tab)));
+    setActive('admin');
+  </script>
 </body>
 
 </html>
